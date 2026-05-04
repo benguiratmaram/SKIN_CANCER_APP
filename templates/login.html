@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skin Cancer AI - Login</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <div class="login-card">
+
+        <!-- LOGO -->
+        <div class="text-center mb-3">
+            <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+            <h3 class="title mt-3">Skin Cancer AI</h3>
+            <p class="subtitle">Dermatology Diagnosis System</p>
+        </div>
+
+        <!-- FLASH -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% for cat, msg in messages %}
+                <div class="alert alert-{{cat}}">{{msg}}</div>
+            {% endfor %}
+        {% endwith %}
+
+        <!-- FORM -->
+        <form method="POST">
+
+            <div class="mb-3">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-medical w-100" id="loginBtn">
+                Login
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- SCRIPT (fix loading bug) -->
+<script>
+document.querySelector("form").addEventListener("submit", function() {
+    let btn = document.getElementById("loginBtn");
+    btn.innerText = "Loading...";
+    btn.disabled = true;
+});
+</script>
+
+</body>
+</html>

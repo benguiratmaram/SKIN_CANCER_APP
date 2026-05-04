@@ -1,0 +1,93 @@
+/* BODY */
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #dff6ff, #f5fbff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* CONTAINER */
+.login-container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* CARD */
+.login-card {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    border-top: 6px solid #2a9df4;
+    animation: fadeIn 0.6s ease;
+}
+
+/* LOGO */
+
+
+.logo {
+    width: 120px;
+    border-radius: 50%;
+    padding: 8px;
+    background: #eaf6ff;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* TITLE */
+.title {
+    font-weight: bold;
+    color: #1b4f72;
+}
+
+/* SUBTITLE */
+.subtitle {
+    font-size: 14px;
+    color: #6c7a89;
+}
+
+/* INPUT */
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #cfe8ff;
+}
+
+.form-control:focus {
+    border-color: #2a9df4;
+    box-shadow: 0 0 0 0.2rem rgba(42,157,244,0.2);
+}
+
+/* BUTTON */
+.btn-medical {
+    background: #2a9df4;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+}
+
+.btn-medical:hover {
+    background: #1d7fd1;
+}
+
+/* ALERT */
+.alert {
+    border-radius: 10px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
